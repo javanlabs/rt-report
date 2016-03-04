@@ -6,10 +6,7 @@ var httpget = require('./httpget.js');
 // Create application/x-www-form-urlencoded parser
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
-
 app.use(express.static('public'));
-app.use("/resource" , express.static('bower_components'));
-
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -28,7 +25,7 @@ var options = {
 
 //all request here : 
 app.get('/', function (req, res) {
-   res.sendFile( __dirname + "/public/" + "index.htm" );
+   res.sendFile( __dirname + "/views/" + "index.htm" );
 })
 
 app.get('/rt_data', function(req, res){
@@ -51,7 +48,7 @@ app.get('/rt_data', function(req, res){
 })
 //end request
 
-var server = app.listen(9000, function () {
+var server = app.listen(8081, function () {
 
   var host = server.address().address
   var port = server.address().port

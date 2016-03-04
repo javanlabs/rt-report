@@ -25,11 +25,8 @@
   "homepage": "https://github.com/javanlabs/rt-report#readme",
   "dependencies": {
     "body-parser": "^1.15.0",
-    "bower": "^1.7.7",
     "cookie-parser": "^1.4.1",
     "express": "^4.13.4",
-    "install": "^0.5.4",
-    "multer": "^1.1.0",
-    "npm": "^3.8.0"
+    "multer": "^1.1.0"
   }
 }
